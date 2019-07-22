@@ -1,0 +1,45 @@
+
+
+<div class="container" *ngIf="listEtablissements">
+
+    <div class="jumbotron">
+            <h1>LISTE DES ELEVES</h1>  
+            <hr md-lg />          
+        <!-- <div class="panel-body"> -->
+            <span *ngFor="let et of listEtablissements._embedded.etablissements">
+                    
+                <button (click)="onGetEleves(et)" [ngClass]="et.id==currentEtablissement.id?'btn btn-danger':'btn btn-primary'">{{et.nomet}}</button>
+                &nbsp; 
+            </span>
+            <p></p>
+            <table class="table table-dark table-striped table-bordered"  *ngIf="listEleves" >
+                <tr>
+                    <th>Id</th><th>Prénom</th><th>Nom</th><th>Sexe</th>
+                    <th>Date Naissance</th><th>Lieu Naissance</th>
+                    <th>Profession</th><th>Téléphone</th><th>Adresse</th><th>Email</th>
+                </tr>
+                <tr *ngFor="let el of listEleves._embedded.eleves">
+                    <td>{{el.id}}</td>
+                    <td>{{el.prenom}}</td>
+                    <td>{{el.nom}}</td>       
+                    <td>{{el.sexe}}</td>
+                    <td>{{el.datenais}}</td>
+                    <td>{{el.lieunais}}</td>
+                    <td>{{el.profession}}</td>
+                    <td>{{el.tel}}</td>
+                    <td>{{el.adresse}}</td>
+                    <td>{{el.email}}</td>
+                </tr>
+            </table>
+       <!-- </div> --> 
+    </div>        
+</div>
+
+
+        
+
+
+      
+        
+        
+    

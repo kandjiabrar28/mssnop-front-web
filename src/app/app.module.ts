@@ -3,14 +3,23 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ElevesComponent } from './eleves/eleves.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import {AlertModule} from 'ngx-bootstrap';
+import { EtablissementsComponent } from './etablissements/etablissements.component';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ElevesComponent,
+    EtablissementsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, FormsModule, HttpClientModule,AlertModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

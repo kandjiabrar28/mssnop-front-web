@@ -1,0 +1,19 @@
+<table   *ngIf="listEleves" class="table table-dark">
+        <tr>
+            <th>ID</th><th>PRENOM</th><th>NOM</th><th>SEXE</th>
+            <th>DATE DE BAISSANCE</th><th>LIEU DE NAISSANCE</th>
+            <th>PROFESSION</th><th>TELEPHONE</th><th>ADRESSE</th><th>EMAIL</th>
+        </tr>
+        <tr *ngFor="let e of listEleves._embedded.eleves">
+            <td>{{e.id}}</td>
+            <td>{{e.prenom}}</td>
+            <td>{{e.nom}}</td>       
+            <td>{{e.sexe}}</td>
+            <td>{{e.datenais}}</td>
+            <td>{{e.lieunais}}</td>
+            <td>{{e.profession}}</td>
+            <td>{{e.tel}}</td>
+            <td>{{e.adresse}}</td>
+            <td>{{e.email}}</td>
+        </tr>
+    </table>
